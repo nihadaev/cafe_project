@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import logo from '../images/logoo.png'
 import card from '../images/card.png'
+import logo2 from '../images/logo.png'
 
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
@@ -164,7 +165,7 @@ function Header() {
                     <div className="header-menu ">
 
                         <div className="header-logo h-100">
-                            <NavLink to="/react_project/"><img src={logo} alt="" /></NavLink>
+                            <NavLink to="/react_project/"><img src={logo2} alt="" /></NavLink>
                         </div>
 
                         <div className="header-list h-100">
