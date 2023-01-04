@@ -20,10 +20,4 @@ const main = async () => {
         console.log('listen on port 8000');
     })
 }
-
 main();
-
-
-// connection.query('select * from products', (err,result) => {
-//     console.log(result);
-// })
