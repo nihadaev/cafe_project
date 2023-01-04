@@ -1,33 +1,24 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-// USE REDUX
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
-// USE REDUX
 
-// SWIPER SLIDE
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/bundle";
 import "swiper/css/effect-cube";
 import { Pagination, Navigation, Autoplay, EffectCube } from "swiper";
-//SWIPER SLIDE
 
-// AOS
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 
-//AOS
 
 function About() {
-  //AOS
 
   useEffect(() => {
     Aos.init({ duration: 1500 })
   }, [])
-
-  //AOS
 
   useEffect(() => {
     window.scrollTo(0, 0)

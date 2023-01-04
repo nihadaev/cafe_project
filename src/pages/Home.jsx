@@ -2,54 +2,34 @@ import React, { useEffect, useState } from 'react'
 import { NavLink, Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// SWIPER SLIDE
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/bundle";
 import "swiper/css/effect-cube";
 import { Pagination, Navigation, Autoplay, EffectCube } from "swiper";
-//SWIPER SLIDE
 
-// AOS
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 
-//AOS
 
-// USE REDUX
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
-// USE REDUX
 
-// SWEETALERT
 import swal from 'sweetalert';
-// SWEETALERT
 
 function Home() {
-    //AOS
 
     useEffect(() => {
         Aos.init({ duration: 2000 })
     }, [])
 
-    //AOS
-
-
     const dispatch = useDispatch()
-    //POPULAR PRODUCTS
     const { popular } = useSelector(state => state)
-    //POPULAR PRODUCTS
-
-    // SALE PRODUCTS
     const { saleproducts } = useSelector(state => state)
-    // SALE PRODUCTS
 
 
-    // CART
     const { cart } = useSelector(state => state)
-    // CART
 
-    // STORY
     const { story } = useSelector(state => state)
     //STORY
 
@@ -116,10 +96,6 @@ function Home() {
 
 
         <>
-
-            {/* <button className="btn btn-success scroll-to"  >
-                GO
-            </button> */}
 
             <div className={mymodal ? 'mymodal opened' : 'mymodal'} onClick={() => setMymodal(!mymodal)}>
                 <div className="mymodal-content" onClick={e => e.stopPropagation()}>

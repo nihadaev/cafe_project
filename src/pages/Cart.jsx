@@ -14,7 +14,6 @@ function Cart() {
 
   const [total, setTotal] = useState([])
 
-  // ADD TO CART
   const incCount = (id) => {
 
     dispatch({ type: "INCCOUNT", payload: id })
@@ -36,7 +35,6 @@ function Cart() {
       setSuremodal(!suremodal)
       let a = cart.find(element => element.id === id)
       setSuremodaldata(a)
-      //dispatch({ type: "DELETE", payload: id })
     }
 
   }

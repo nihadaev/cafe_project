@@ -1,20 +1,13 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-
-// USE REDUX
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-// тUSE REDUX
-
-// SWEETALERT
 import swal from "sweetalert";
-// SWEETALERT
+
 
 function Footer() {
   const state = useSelector((state) => state);
   const dispatch = useDispatch();
-
-  // SUBSCRIBE NEWS
   const { subscribers } = useSelector((state) => state);
   const [subscriber, setSubscriber] = useState({});
 
@@ -54,7 +47,6 @@ function Footer() {
     setSubscriber({ id: subscriberid + 1, [e.target.name]: e.target.value });
   };
 
-  //SUBSCRIBE NEWS
   return (
     <div className="myfooter">
       <div className="container">

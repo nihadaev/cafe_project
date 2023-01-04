@@ -4,8 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useTransition, animated } from "react-spring";
 
 
-
-//Pages and Components
 import Header from "./components/Header";
 import Home from './pages/Home'
 import Menu from './pages/Menu'

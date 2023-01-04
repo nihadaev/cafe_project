@@ -3,10 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useParams } from 'react-router-dom'
 
-// SWEETALERT
 import swal from 'sweetalert';
-// SWEETALERT
-
 
 function Detail() {
     let x = useLocation()
@@ -52,7 +49,6 @@ function Detail() {
 
     const { cart } = useSelector(state => state)
     const dispatch = useDispatch()
-    // ADD TO CART
     const addtocart = (id) => {
 
         let check = cart.some(e => e.id === id)
@@ -65,32 +61,20 @@ function Detail() {
             }
 
     }
-    // ADD TO CART
-
-
 
     const { wish } = useSelector(state => state)
-    //ADD TO WISHLIST
     const addToWishlist = (id) => {
         dispatch({ type: "WISH", payload: id })
     }
-    // ADD TO WISHLIST
-
-    // OPEN OR CLOSE MODAL
     const [mymodal, setMymodal] = useState(false)
-    // OPEN OR CLOSE MODAL
-
-    //DATA FOR MODAL
     const [moreData, setMoreData] = useState({})
 
-    //DATA FOR MODAL
-    // SET DATA FOR MODAL
     const readMore = (id) => {
         setMymodal(!mymodal)
         let a = products.find(e => e.id === id)
         setMoreData(a)
     }
-    // SET DATA FOR MODAL
+    
     return (
         <div className='menu-page'>
             <h2>Menu</h2>

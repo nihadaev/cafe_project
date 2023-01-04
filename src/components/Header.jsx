@@ -7,46 +7,22 @@ import logo2 from '../images/logo.png'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 
-// AOS
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 
-//AOS
-
-
 function Header() {
-
-    //AOS
 
     useEffect(() => {
         Aos.init({ duration: 1500 })
     }, [])
 
-    //AOS
     const [menu, setMenu] = useState(false)
     const { cart, wish } = useSelector(state => state)
     const { products } = useSelector(state => state)
 
     const dispatch = useDispatch()
     const [headerClassName, setHeaderClassName] = useState('');
-
-    // const handleScroll = (headerClassName) => {
-    //     if (headerClassName !== 'menuscroll' && window.pageYOffset >= 100) {
-    //         setHeaderClassName('menuscroll');
-    //     } else if (headerClassName === 'menuscroll' && window.pageYOffset < 100) {
-    //         setHeaderClassName('');
-    //     }
-
-
-    // }
-
-    // useEffect(() => {
-    //     window.onscroll = () => handleScroll(headerClassName);
-    // }, [headerClassName]);
-
-    // Search modal
     const [search, setSearch] = useState(false)
-    // Search modal
 
     const [value, setValue] = useState('')
 
@@ -55,10 +31,7 @@ function Header() {
         return el.title.toLowerCase().includes(value.toLowerCase())
     })  
 
-
-    // ADD TO CART
     const addtocart = (id) => {
-
         let check = cart.some(e => e.id === id)
         if (check) {
             dispatch({ type: "INCCOUNT", payload: id })
@@ -66,11 +39,7 @@ function Header() {
         } else {
             dispatch({ type: "ADD", payload: id })
         }
-
-
-
     }
-    // ADD TO CART
     return (
         <>
             <div className={search ? 'searchModal openSearch' : "searchModal"}>
