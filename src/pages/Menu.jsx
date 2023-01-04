@@ -19,7 +19,6 @@ function Menu() {
     const [cat, setCat] = useState([])
 
     useEffect(() => {
-
         products && products.map(e => {
             setCat(state => [...state, e.category])
         })
@@ -40,9 +39,6 @@ function Menu() {
         } else{
             dispatch({ type: "ADD", payload: id })
         }
-        
-            
-
     }
     // ADD TO CART
 

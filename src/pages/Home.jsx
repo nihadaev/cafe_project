@@ -83,10 +83,15 @@ function Home() {
     const addtocart = (id) => {
 
         let check = cart.some(e => e.id === id)
-        check ?
-            dispatch({ type: "INCCOUNT", payload: id }) :
-            dispatch({ type: "ADD", payload: id })
-
+        if(check){
+            dispatch({ type: "INCCOUNT", payload: id })
+            dispatch({ type: "TOTAL", payload: id }) 
+        }
+            
+         else{
+             dispatch({ type: "ADD", payload: id })
+            }
+           
     }
     // ADD TO CART
 
